@@ -1,6 +1,8 @@
 'use strict';
 
 eventsApp.controller('EventController', function($scope) {
+
+	$scope.snippet = '<span style="color:#ff00000">hi there</span>';
 	$scope.event = {
 		name: 'Angular Boot Camp',
 		date: '21/12/58',
