@@ -24,19 +24,11 @@
 				</div>
 			</div>
 
-			<button class="btn" ng-disabled="buttonDisabled">Disable</button>
-
-			<br>
-			<div ng-non-bindable>{{1+2}}</div>
-
-			<div ng-bind-html="snippet">some title</div>
- 
-			<h2 ng-hide="boolValue">Hide Title</h2>
-
 			<div class="row">
 				<div class="span3">
-					<div><strong>Date:</strong> {{event.date}} </div>
+					<div><strong>Date:</strong> {{event.date | date:'medium'}} </div>
 					<div><strong>Time:</strong> {{event.time}} </div>
+					<div><strong>Price:</strong> {{event.time}} </div>
 				</div>
 				<div class="span4">
 					<address>
@@ -47,14 +39,28 @@
 				</div>
 			</div>
 
+			<div> {{ 3.1415926535 | number: 2 }}</div>
+			<div> {{ {a:3, b:'hi', c:{aa:35} } | json }}</div>
 			<hr />
 
 			<h3>Sessions</h3>
-			<ul class="thumbnails">
-				<li ng-repeat="session in event.sessions">
+			Order By:
+			<select ng-model="sortorder" class="input-small">
+				<option selected value="name">Name</option>
+				<option value="-upVoteCount">Votes</option>
+			</select>
+			Show:
+			<select ng-model="query.level" class="input-medium">
+				<option selected value="">All</option>
+				<option value="introductory">Introductory</option>
+				<option value="intermediate">Intermediate</option>
+				<option value="advanced">Advanced</option>
+			</select>
+			<ul class="thumbnails"> 
+				<li ng-repeat="session in event.sessions | orderBy:sortorder | filter:query">
 					<div class="row session">
 
-						<div class="span0 well votingWidget">
+						<div class="span0 well votingWidget"> 
 							<div class="votingButton" ng-click="upVoteSession(session)">
 								<i class="icon-chevron-up icon-white"></i>
 							</div>
