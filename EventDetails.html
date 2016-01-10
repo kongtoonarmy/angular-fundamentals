@@ -75,7 +75,7 @@
 						<div class="well span9">
 							<h4 class="well-title">{{session.name}}</h4>
 							<h6 style="margin-top: -10px">{{session.creatorName}}</h6>
-                            <span>Duration: {{session.duration}}</span><br>
+                            <span>Duration: {{session.duration | durations }}</span><br>
                             <span>Level: {{session.level}}</span>
 
                             <p>{{session.abstract}}</p>
@@ -91,5 +91,6 @@
 	<script src="libraries/angularjs/angular-sanitize.js"></script>
 	<script src="app/app.js"></script>
     <script src="app/controllers/EventController.js"></script>
+    <script src="app/filters/EventFilter.js"></script>
 </body>
 </html>
