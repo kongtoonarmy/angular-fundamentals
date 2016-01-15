@@ -1,9 +1,9 @@
 'use strict';
 
 eventsApp.controller('EditProfileController', ['$scope', 'gravatarUrlBuilder', function($scope, gravatarUrlBuilder) {
-	$scope.user = {};
+    $scope.user = {};
 
-	$scope.getGravatarUrl = function(email) {
+    $scope.getGravatarUrl = function(email) {
         return gravatarUrlBuilder.buildGravatarUrl(email);
     };
 }]);
