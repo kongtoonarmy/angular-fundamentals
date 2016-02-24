@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsApp">
+<head>
+    <meta charset="utf-8">
+    <title>Locale Sample</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+</head>
+<body>
+<div class="container">
+	<div ng-controller="FilterSampleController" style="padding:20px;">
+
+        Duration 1: {{data.duration1}} <br>
+        Duration 2: {{data.duration2}} <br>
+        Duration 3: {{data.duration3}} <br>
+        Duration 4: {{data.duration4}} <br>
+	</div>
+
+</div>
+
+<script src="/libraries/jquery/jquery.min.js"></script>
+<script src="/libraries/angularjs/angular.js"></script>
+<script src="/libraries/angularjs/angular-resource.js"></script>
+<script src="/libraries/angularjs/angular-locale_th.js"></script>
+<script src="/app/app.js"></script>
+<script src="/app/controllers/FilterSampleController.js"></script>
+<script src="/app/filters/EventFilter.js"></script>
+<script src="/libraries/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
