@@ -12,7 +12,8 @@ app.use(express.static(rootpath));
 //app.use(express.static(__dirname + '/'));
 
 app.get('/data/event/:id', events.get);
+app.get('/data/event', events.getAll);
 app.post('/data/event/:id', events.save);
 
 app.listen(8080);
-console.log('Listening on port 8080...');  
+console.log('Listening on port 8080...');
