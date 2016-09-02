@@ -1,10 +1,9 @@
 <div>
     <h1>Events</h1>
     <hr>
-    <hr>
     <ui class="thumbnails">
         <li ng-repeat="event in events|orderBy:sortorder" class="span5">
-            <a href="#/event/{{event.id}}">
+            <a href="/event/{{event.id}}">
                 <div class="well hoverwell">
                     <div class="row">
                         <h2 class="span6">{{event.name}}</h2>

@@ -15,5 +15,9 @@ app.get('/data/event/:id', events.get);
 app.get('/data/event', events.getAll);
 app.post('/data/event/:id', events.save);
 
+app.get('*', function(req, res) {
+    res.sendFile(rootPath + 'index.html');
+});
+
 app.listen(8080);
 console.log('Listening on port 8080...');
