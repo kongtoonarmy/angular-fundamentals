@@ -7,7 +7,8 @@ eventsApp.controller('EventController', function($scope, eventData, $anchorScrol
 
     console.log($route.current.pathParams.eventId);
     console.log($route.current.pathParams.foo);
-    console.log($route.current.params.foo);
+    console.log($route.current.params.foo); // http://localhost:8080/#/event/1?foo=bar
+    console.log($route.current.foo);
 
     $scope.reload = function() {
         $route.reload();
